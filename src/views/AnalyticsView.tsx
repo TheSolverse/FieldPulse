@@ -42,7 +42,7 @@ export const AnalyticsView: React.FC = () => {
 
       {/* Row 1: Indicative Forecast Card */}
       <div className="oil-card" style={{
-        background: 'linear-gradient(135deg, var(--teal-subtle), var(--bg-surface))',
+        background: 'var(--bg-surface)',
         border: '1px solid var(--teal-accent)'
       }}>
         {forecast.isAvailable ? (

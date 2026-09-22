@@ -255,7 +255,7 @@ export const LiveScheduleGanttView: React.FC = () => {
                       width: `${actualWidth}%`,
                       top: '25px',
                       height: '14px',
-                      background: act.percentComplete === 100 ? '#10B981' : 'linear-gradient(90deg, #0EA5E9, #38BDF8)',
+                      background: act.percentComplete === 100 ? '#10B981' : '#0EA5E9',
                       borderRadius: '3px',
                       zIndex: 4,
                       boxShadow: '0 2px 4px rgba(0,0,0,0.3)',

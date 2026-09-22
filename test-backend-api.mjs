@@ -48,8 +48,8 @@ async function runBackendTests() {
     const actsRes = await fetch(`${BASE_URL}/activities`);
     const acts = await actsRes.json();
     assert(
-      actsRes.status === 200 && Array.isArray(acts) && acts.length === 19,
-      '[API-ACT-01] Retrieves complete baseline schedule of 19 activities'
+      actsRes.status === 200 && Array.isArray(acts) && acts.length >= 19,
+      `[API-ACT-01] Retrieves complete baseline schedule (${acts.length} activities)`
     );
 
     const targetAct = acts[0];

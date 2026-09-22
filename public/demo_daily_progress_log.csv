@@ -1,0 +1,9 @@
+Activity Description,Line / Tag,Discipline,Execution Date,Planned Quantity,Actual Quantity,Unit,Progress %,Location,Supervisor / Subcontractor,Notes / Bottlenecks
+Erect piping spool on Line 24-XX,Line 24-XX,Piping,12-09-2026,24,18,joints,75%,North Pipe Rack (Bay 3-7),R. Sharma (L&T Hydrocarbon),6 welders & 4 riggers. Crane CR-04 operated smoothly. Hydrotest prep underway.
+Secondary rack tie-in welding,Line 24-YY,Piping,12-09-2026,24,6,joints,25%,North Pipe Rack Bay 4,R. Sharma (L&T Hydrocarbon),Alignment checked. Pre-heating in progress.
+Compressor Bay A Foundation Concreting,FND-C-101,Civil,12-09-2026,320,160,m3,50%,Compressor Bay A,M. Joshi (Afcons Civil),Pouring completed up to 50%. Pneumatic rock breaker used for hard strata.
+Substation cable tray installation,TR-SS-01,Electrical,14-09-2026,60,42,meters,70%,Substation Corridor,V. Patel (Siemens Energy),42m laid. Earthing jumpers pending inspection clearance.
+Feed gas separator inlet nozzle N1 alignment,V-101,Static Equipment,13-09-2026,1,1,equipment,100%,Process Area 1,K. Singh (Thermax Ltd),Gasket installed and torque tightened to 450 Nm.
+Hydrocarbon condensate pump P-204 alignment,P-204,Rotating Equipment,15-09-2026,4,2,bolts,50%,Pump House B,K. Singh (Sulzer Pumps),Dial gauge runout within 0.03mm. Final shimming in progress.
+Pressure Transmitter Calibration & Loop Check,PT-1042,Instrumentation,15-09-2026,8,6,loops,75%,Control Building Rack 2,A. Nair (Honeywell DCS),Loop powered. HART communicator test passed.
+Flare knockout drum structural steel erection,STR-FL-02,Structural,16-09-2026,12,9.5,MT,79%,Flare Area South,T. Banerjee (Tata Projects),Columns erected and plumb checked with total station.

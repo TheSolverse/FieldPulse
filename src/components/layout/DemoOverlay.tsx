@@ -158,10 +158,10 @@ export const DemoOverlay: React.FC = () => {
           bottom: '24px',
           right: '24px',
           zIndex: 9999,
-          background: 'var(--brand-gradient)',
+          background: 'var(--accent-primary)',
           padding: '2px',
           borderRadius: '50px',
-          boxShadow: '0 8px 30px rgba(212, 20, 20, 0.4)',
+          boxShadow: '0 8px 30px rgba(0, 0, 0, 0.4)',
           cursor: 'pointer'
         }}
         onClick={() => setIsMinimized(false)}
@@ -194,19 +194,19 @@ export const DemoOverlay: React.FC = () => {
       background: 'var(--bg-surface-elevated)',
       border: '1px solid var(--accent-primary)',
       borderRadius: '12px',
-      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 20, 20, 0.15)',
+      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--border-subtle)',
       overflow: 'hidden',
       display: 'flex',
       flexDirection: 'column'
     }}>
       {/* Header */}
       <div style={{
-        background: 'var(--brand-gradient)',
+        background: 'var(--accent-primary)',
         padding: '12px 16px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        color: '#fff'
+        color: '#ffffff'
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 700, fontSize: '14px' }}>
           <Presentation size={16} />

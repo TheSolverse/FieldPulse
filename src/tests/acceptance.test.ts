@@ -410,9 +410,9 @@ async function runAcceptanceTests() {
   const resetDurationMs = performance.now() - t0;
   const reloadedActivities = StorageService.loadActivities();
   assert(
-    reloadedActivities.length === 19 && resetDurationMs < 50,
+    reloadedActivities.length === INITIAL_SCHEDULE_ACTIVITIES.length && resetDurationMs < 50,
     'AC-SYS-01',
-    `Re-hydrates pristine baseline schedule (19 activities) in <50ms (Actual: ${resetDurationMs.toFixed(2)}ms)`
+    `Re-hydrates pristine baseline schedule (${INITIAL_SCHEDULE_ACTIVITIES.length} activities) in <50ms (Actual: ${resetDurationMs.toFixed(2)}ms)`
   );
 
   console.log('\n========================================================================');

@@ -6,7 +6,8 @@ import {
   Layers, 
   PlayCircle,
   Sun,
-  Moon
+  Moon,
+  Activity
 } from 'lucide-react';
 
 export const TopBar: React.FC = () => {
@@ -55,28 +56,34 @@ export const TopBar: React.FC = () => {
       <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
         <div style={{ 
           background: 'var(--accent-primary)',
-          color: '#fff',
-          width: '32px',
-          height: '32px',
-          borderRadius: '6px',
+          color: '#ffffff',
+          width: '36px',
+          height: '36px',
+          borderRadius: '8px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          fontWeight: 800,
-          fontSize: '18px'
+          boxShadow: '0 2px 10px rgba(79, 70, 229, 0.3)',
+          flexShrink: 0
         }}>
-          S
+          <Activity size={20} strokeWidth={2.5} />
         </div>
         <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '1px', color: 'var(--accent-primary)', textTransform: 'uppercase' }}>
-              Solverse
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <span style={{ 
+              fontSize: '10px', 
+              fontWeight: 700, 
+              letterSpacing: '1.2px', 
+              color: 'var(--accent-primary)', 
+              textTransform: 'uppercase' 
+            }}>
+              SOLVERSE
             </span>
           </div>
-          <div style={{ fontSize: '16px', fontWeight: 800, letterSpacing: '-0.5px', color: 'var(--text-primary)', lineHeight: 1.1 }}>
+          <div style={{ fontSize: '15px', fontWeight: 800, letterSpacing: '-0.3px', color: 'var(--text-primary)', lineHeight: 1.2 }}>
             FIELD PULSE
           </div>
-          <div style={{ fontSize: '10px', color: 'var(--text-secondary)' }}>
+          <div style={{ fontSize: '10.5px', color: 'var(--text-secondary)', fontWeight: 500 }}>
             Execution-to-Schedule Intelligence
           </div>
         </div>

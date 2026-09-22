@@ -338,7 +338,7 @@ export const TimeAgentView: React.FC = () => {
               >
                 <div style={{
                   maxWidth: '85%',
-                  background: m.sender === 'supervisor' ? 'linear-gradient(135deg, #0284C7 0%, #0369A1 100%)' : 'var(--bg-surface-elevated)',
+                  background: m.sender === 'supervisor' ? '#0284C7' : 'var(--bg-surface-elevated)',
                   color: m.sender === 'supervisor' ? '#FFFFFF' : 'var(--text-primary)',
                   padding: '12px 16px',
                   borderRadius: m.sender === 'supervisor' ? '12px 12px 2px 12px' : '12px 12px 12px 2px',
