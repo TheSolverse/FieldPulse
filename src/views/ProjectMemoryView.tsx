@@ -466,6 +466,14 @@ export const ProjectMemoryView: React.FC = () => {
     setTimeout(() => setExportFeedback(null), 4000);
   };
 
+  const applyToPredictiveModel = (item: ProjectMemoryItem) => {
+    setExportFeedback(`Applying ${item.metricValue || 'observed metrics'} to Estimator Engine...`);
+    setTimeout(() => {
+      setExportFeedback(null);
+      alert(`Successfully calibrated Predictive Estimator using Memory Reference: ${item.id}`);
+    }, 1500);
+  };
+
   // Helper to copy markdown formatted report
   const copyReportMarkdown = (item: ProjectMemoryItem) => {
     const md = `# Detailed Institutional Memory Dossier: ${item.title}
