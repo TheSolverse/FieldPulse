@@ -7,6 +7,7 @@
 [![SQLite](https://img.shields.io/badge/Database-Node%2024%20Native%20SQLite-003B57?logo=sqlite&logoColor=white)](https://nodejs.org/api/sqlite.html)
 [![Tests](https://img.shields.io/badge/Tests-63%2F63%20Passing-10B981)](#-automated-verification)
 [![Design](https://img.shields.io/badge/Design%20System-Field Pulse%20Industrial-0EA5E9)](#-design-system)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > **Deployment Anchor:** Baghewala Surface Facilities Expansion, Thar Desert, Rajasthan  
 > **Target Enterprise:** Enterprise Capital Projects (Heavy Infrastructure, Energy, EPC & Utilities)  
@@ -150,4 +151,4 @@ The platform includes a dedicated **One-Click Persona Login Gateway** (`/login`)
 
 ## 📄 License
 
-Proprietary enterprise capital project controls platform. Built with Field Pulse Architecture. All rights reserved.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
