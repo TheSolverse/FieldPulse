@@ -305,7 +305,7 @@ export const TimeAgentView: React.FC = () => {
       {/* Two Column Grid */}
       <div style={{ display: 'grid', gridTemplateColumns: '8fr 4fr', gap: '20px' }}>
         {/* Left: Chat Stream & Input */}
-        <div className="oil-card" style={{ display: 'flex', flexDirection: 'column', height: '640px', padding: 0 }}>
+        <div className="oil-card" style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 220px)', minHeight: '400px', maxHeight: '640px', padding: 0 }}>
           {/* Chat Header */}
           <div style={{
             padding: '14px 20px',
@@ -367,7 +367,7 @@ export const TimeAgentView: React.FC = () => {
                         <span className="font-mono">{m.entityCard.targetActivityCode}</span> : {m.entityCard.targetActivityName}
                       </div>
 
-                      <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4px', marginBottom: '10px' }}>
+                      <div className="preserve-grid" style={{ fontSize: '11.5px', color: 'var(--text-secondary)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4px', marginBottom: '10px' }}>
                         <div>Progress: <strong style={{ color: 'var(--text-primary)' }}>{m.entityCard.progress}</strong></div>
                         <div>Date: <strong style={{ color: 'var(--text-primary)' }}>{m.entityCard.actualStart}</strong></div>
                         <div style={{ gridColumn: '1 / -1' }}>Location: <strong style={{ color: 'var(--text-primary)' }}>{m.entityCard.location}</strong></div>
