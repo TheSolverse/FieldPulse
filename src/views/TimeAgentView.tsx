@@ -291,7 +291,7 @@ export const TimeAgentView: React.FC = () => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', overflowX: 'hidden' }}>
       {/* Header */}
       <div>
         <h1 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '4px' }}>
@@ -305,13 +305,14 @@ export const TimeAgentView: React.FC = () => {
       {/* Two Column Grid */}
       <div style={{ display: 'grid', gridTemplateColumns: '8fr 4fr', gap: '20px' }}>
         {/* Left: Chat Stream & Input */}
-        <div className="oil-card" style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 220px)', minHeight: '400px', maxHeight: '640px', padding: 0 }}>
+        <div className="oil-card" style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 220px)', minHeight: '400px', maxHeight: '640px', padding: 0, overflowX: 'hidden' }}>
           {/* Chat Header */}
           <div style={{
             padding: '14px 20px',
             borderBottom: '1px solid var(--border-subtle)',
             display: 'flex',
             alignItems: 'center',
+            flexWrap: 'wrap',
             gap: '10px',
             background: 'var(--bg-surface-elevated)'
           }}>
@@ -437,7 +438,7 @@ export const TimeAgentView: React.FC = () => {
                 <Mic size={16} />
               )}
             </button>
-            <div style={{ flex: 1, position: 'relative' }}>
+            <div style={{ flex: 1, position: 'relative', minWidth: 0 }}>
               <input
                 type="text"
                 className="input-field"
@@ -465,7 +466,7 @@ export const TimeAgentView: React.FC = () => {
 
         {/* Right: Audio Transcript Presets */}
         <div className="oil-card" style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
             <Mic size={18} color="var(--teal-accent)" />
             <h2 style={{ fontSize: '14px', fontWeight: 700 }}>Voice Audio Presets (Simulated ASR)</h2>
           </div>
