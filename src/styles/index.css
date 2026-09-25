@@ -201,6 +201,10 @@ code, pre, .font-mono {
   background: var(--bg-base);
 }
 
+.app-container {
+  container-type: inline-size;
+}
+
 .main-content-area {
   flex: 1;
   display: flex;
@@ -535,14 +539,14 @@ mark.phrase-highlight:hover {
 @container (max-width: 900px) {
   /* Collapse TopBar layout */
   header {
-    height: auto !important;
-    flex-wrap: wrap !important;
-    gap: 16px !important;
-    padding: 16px !important;
+    height: var(--topbar-height) !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    padding: 0 12px !important;
   }
   
   header > div {
-    flex-wrap: wrap !important;
+    flex-wrap: nowrap !important;
   }
 
   /* Hide center project selector in top bar to save space on mobile */
@@ -551,8 +555,8 @@ mark.phrase-highlight:hover {
   }
   
   .topbar-actions-right {
-    width: 100%;
-    justify-content: space-between;
+    width: auto;
+    justify-content: flex-end;
   }
 
   /* Ensure navigation scrolls nicely without stretching out */
