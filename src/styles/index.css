@@ -631,6 +631,7 @@ mark.phrase-highlight:hover {
 
   /* Status Strip Compression */
   .global-status-strip {
+    flex-direction: row !important;
     flex-wrap: nowrap !important;
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch;

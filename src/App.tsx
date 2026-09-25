@@ -85,7 +85,7 @@ const AppContent: React.FC = () => {
         onToggleMobile={() => setIsMobileSimulated(!isMobileSimulated)} 
       />
       <TopNavigation />
-      <GlobalStatusStrip />
+      {activeView === 'dashboard' && <GlobalStatusStrip />}
 
       <main style={{
         flex: 1,
