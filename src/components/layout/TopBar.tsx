@@ -3,14 +3,18 @@ import { useApp } from '../../context/AppContext';
 import { 
   Calendar, 
   RotateCcw, 
-  Layers, 
-  PlayCircle,
   Sun,
   Moon,
-  Activity
+  Activity,
+  Smartphone
 } from 'lucide-react';
 
-export const TopBar: React.FC = () => {
+interface TopBarProps {
+  isMobileSimulated?: boolean;
+  onToggleMobile?: () => void;
+}
+
+export const TopBar: React.FC<TopBarProps> = ({ isMobileSimulated, onToggleMobile }) => {
   const { 
     project, 
     settings, 
@@ -116,6 +120,22 @@ export const TopBar: React.FC = () => {
           <span>Cut-off:</span>
           <strong style={{ color: 'var(--text-primary)', fontFamily: 'monospace' }}>{settings.dataDate}</strong>
         </div>
+
+        {onToggleMobile && (
+          <button
+            onClick={onToggleMobile}
+            className="btn btn-secondary"
+            style={{ 
+              padding: '6px', 
+              borderRadius: '4px',
+              color: isMobileSimulated ? 'var(--accent-primary)' : 'inherit',
+              background: isMobileSimulated ? 'var(--accent-primary-subtle)' : 'var(--btn-secondary-bg)'
+            }}
+            title="Toggle Mobile Simulator"
+          >
+            <Smartphone size={14} />
+          </button>
+        )}
 
         <button
           onClick={toggleTheme}

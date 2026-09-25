@@ -484,7 +484,52 @@ mark.phrase-highlight:hover {
 /* =========================================
    MOBILE RESPONSIVENESS OVERRIDES 
    ========================================= */
-@media (max-width: 900px) {
+.app-container {
+  container-type: inline-size;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-base);
+}
+
+.app-container.mobile-simulated {
+  width: 390px !important;
+  height: 844px !important;
+  margin: 0 auto;
+  border: 12px solid #000;
+  border-radius: 40px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mobile-simulated-wrapper {
+  background: #000;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+.mobile-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 100000;
+  font-weight: bold;
+}
+
+@container (max-width: 900px) {
   /* Collapse TopBar layout */
   header {
     height: auto !important;
@@ -554,12 +599,12 @@ mark.phrase-highlight:hover {
   
   /* Full screen modals and drawers */
   .drawer-panel {
-    width: 100vw !important;
-    max-width: 100vw !important;
+    width: 100cqi !important;
+    max-width: 100cqi !important;
   }
   
   .modal-content {
-    width: 95vw !important;
+    width: 95cqi !important;
     margin: 0 !important;
     max-height: 90vh !important;
   }

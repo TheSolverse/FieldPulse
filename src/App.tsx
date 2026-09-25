@@ -33,6 +33,8 @@ const AppContent: React.FC = () => {
     setTracingEvidenceActivity
   } = useApp();
 
+  const [isMobileSimulated, setIsMobileSimulated] = React.useState(false);
+
   const renderActiveView = () => {
     switch (activeView) {
       case 'dashboard':
@@ -68,17 +70,20 @@ const AppContent: React.FC = () => {
     }
   };
 
-  return (
-    <div style={{
+  const appShell = (
+    <div className={`app-container ${isMobileSimulated ? 'mobile-simulated' : ''}`} style={{
       display: 'flex',
       flexDirection: 'column',
-      height: '100vh',
-      width: '100vw',
+      height: '100%',
+      width: '100%',
       background: 'var(--bg-base)',
       color: 'var(--text-primary)',
       overflow: 'hidden'
     }}>
-      <TopBar />
+      <TopBar 
+        isMobileSimulated={isMobileSimulated} 
+        onToggleMobile={() => setIsMobileSimulated(!isMobileSimulated)} 
+      />
       <TopNavigation />
       <GlobalStatusStrip />
 
@@ -109,6 +114,19 @@ const AppContent: React.FC = () => {
       <DemoOverlay />
     </div>
   );
+
+  if (isMobileSimulated) {
+    return (
+      <div className="mobile-simulated-wrapper">
+        <button className="mobile-close-btn" onClick={() => setIsMobileSimulated(false)}>
+          Exit Mobile View
+        </button>
+        {appShell}
+      </div>
+    );
+  }
+
+  return appShell;
 };
 
 const App: React.FC = () => {
