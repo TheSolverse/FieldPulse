@@ -105,7 +105,7 @@ export const TopBar: React.FC<TopBarProps> = ({ isMobileSimulated, onToggleMobil
 
       {/* Right: Controls & User */}
       <div className="topbar-actions-right" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-        <div style={{
+        <div className="mobile-hidden" style={{
           display: 'flex',
           alignItems: 'center',
           gap: '6px',
@@ -124,12 +124,13 @@ export const TopBar: React.FC<TopBarProps> = ({ isMobileSimulated, onToggleMobil
         {onToggleMobile && (
           <button
             onClick={onToggleMobile}
-            className="btn btn-secondary"
+            className="btn btn-secondary mobile-only"
             style={{ 
               padding: '6px', 
               borderRadius: '4px',
               color: isMobileSimulated ? 'var(--accent-primary)' : 'inherit',
-              background: isMobileSimulated ? 'var(--accent-primary-subtle)' : 'var(--btn-secondary-bg)'
+              background: isMobileSimulated ? 'var(--accent-primary-subtle)' : 'var(--btn-secondary-bg)',
+              marginLeft: 'auto'
             }}
             title="Toggle Mobile Simulator"
           >
@@ -148,7 +149,7 @@ export const TopBar: React.FC<TopBarProps> = ({ isMobileSimulated, onToggleMobil
 
         <button
           onClick={resetAllData}
-          className="btn btn-secondary"
+          className="btn btn-secondary mobile-hidden"
           style={{ padding: '5px 11px', fontSize: '12px', borderRadius: '4px' }}
           title="Reset Demo State"
         >

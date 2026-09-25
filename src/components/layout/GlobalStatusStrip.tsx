@@ -13,7 +13,7 @@ export const GlobalStatusStrip: React.FC = () => {
   };
 
   return (
-    <div style={{
+    <div className="global-status-strip" style={{
       display: 'flex',
       alignItems: 'center',
       gap: '24px',

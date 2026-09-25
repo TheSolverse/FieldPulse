@@ -585,6 +585,11 @@ mark.phrase-highlight:hover {
     gap: 12px !important;
   }
 
+  /* Only wrap specific containers like topbar panels, not ALL align-items:center */
+  .topbar-actions-right {
+    flex-wrap: wrap !important;
+  }
+
   /* Data tables / rows overflow handling */
   table, .table-container {
     display: block !important;
@@ -617,5 +622,23 @@ mark.phrase-highlight:hover {
   /* Ensure small buttons don't break */
   .btn, .badge {
     white-space: nowrap !important;
+  }
+
+  /* Visibility Helpers */
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  /* Status Strip Compression */
+  .global-status-strip {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    padding: 12px !important;
+    gap: 16px !important;
+  }
+  
+  .global-status-strip > div[style*="width: 1px"] {
+    display: none !important; /* Hide the divider lines on mobile to save space */
   }
 }
