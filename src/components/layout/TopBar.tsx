@@ -90,7 +90,7 @@ export const TopBar: React.FC = () => {
       </div>
 
       {/* Center: Project Selector */}
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div className="topbar-project-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div style={{ fontSize: '14px', fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '-0.1px' }}>
           {project.name}
         </div>
@@ -100,7 +100,7 @@ export const TopBar: React.FC = () => {
       </div>
 
       {/* Right: Controls & User */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+      <div className="topbar-actions-right" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
         <div style={{
           display: 'flex',
           alignItems: 'center',
