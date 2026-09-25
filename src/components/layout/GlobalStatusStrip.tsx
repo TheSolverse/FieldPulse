@@ -16,7 +16,7 @@ export const GlobalStatusStrip: React.FC = () => {
     <div className="global-status-strip" style={{
       display: 'flex',
       alignItems: 'center',
-      gap: '24px',
+      gap: '16px',
       padding: '8px 24px',
       background: 'var(--bg-base)',
       borderBottom: '1px solid var(--border-subtle)',

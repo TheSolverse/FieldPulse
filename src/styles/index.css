@@ -538,14 +538,14 @@ mark.phrase-highlight:hover {
 
 @container (max-width: 900px) {
   /* Collapse TopBar layout */
-  header {
+  .topbar {
     height: var(--topbar-height) !important;
     flex-wrap: nowrap !important;
     gap: 8px !important;
     padding: 0 12px !important;
   }
   
-  header > div {
+  .topbar > div {
     flex-wrap: nowrap !important;
   }
 

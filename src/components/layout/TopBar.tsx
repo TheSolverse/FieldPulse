@@ -34,7 +34,7 @@ export const TopBar: React.FC<TopBarProps> = ({ isMobileSimulated, onToggleMobil
   };
 
   return (
-    <header style={{
+    <header className="topbar" style={{
       height: 'var(--topbar-height)',
       background: 'var(--bg-surface)',
       borderBottom: '1px solid var(--border-subtle)',
