@@ -115,13 +115,14 @@ export const LiveScheduleGanttView: React.FC = () => {
       )}
 
       {/* Gantt Canvas */}
-      <div className="oil-card" style={{ padding: 0, overflow: 'hidden' }}>
+      <div className="oil-card" style={{ padding: 0, overflowX: 'auto', overflowY: 'hidden' }}>
         {/* Table & Timeline Header */}
-        <div style={{
+        <div className="preserve-grid" style={{
           display: 'grid',
           gridTemplateColumns: '440px 1fr',
           borderBottom: '1px solid var(--border-subtle)',
-          background: 'var(--bg-surface-elevated)'
+          background: 'var(--bg-surface-elevated)',
+          minWidth: '800px'
         }}>
           {/* Left Table Header */}
           <div style={{
@@ -176,12 +177,14 @@ export const LiveScheduleGanttView: React.FC = () => {
             return (
               <div
                 key={act.id}
+                className="preserve-grid"
                 style={{
                   display: 'grid',
                   gridTemplateColumns: '440px 1fr',
                   borderBottom: '1px solid var(--border-subtle)',
                   background: act.syncStatus === 'pending_sync' ? 'rgba(245, 158, 11, 0.04)' : 'transparent',
-                  transition: 'background 0.15s ease'
+                  transition: 'background 0.15s ease',
+                  minWidth: '800px'
                 }}
                 onMouseEnter={(e) => e.currentTarget.style.background = 'var(--bg-surface-hover)'}
                 onMouseLeave={(e) => e.currentTarget.style.background = act.syncStatus === 'pending_sync' ? 'rgba(245, 158, 11, 0.06)' : 'transparent'}

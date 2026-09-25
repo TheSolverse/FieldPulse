@@ -560,10 +560,16 @@ mark.phrase-highlight:hover {
   }
   
   /* Flatten all generic grid layouts into single column */
-  div[style*="display: grid"], 
-  div[style*="grid-template-columns"] {
+  div[style*="display: grid"]:not(.preserve-grid), 
+  div[style*="grid-template-columns"]:not(.preserve-grid) {
     grid-template-columns: 1fr !important;
     gap: 12px !important;
+  }
+
+  /* Exclude grids that use preserve-grid class and let them scroll horizontally if needed */
+  .preserve-grid {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
   }
 
   /* Common padding adjustments */

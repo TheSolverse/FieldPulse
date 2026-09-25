@@ -138,7 +138,7 @@ export const AnalyticsView: React.FC = () => {
       {/* Row 2: S-Curve Chart & Discipline Productivity */}
       <div style={{ display: 'grid', gridTemplateColumns: '7fr 5fr', gap: '20px' }}>
         {/* S-Curve */}
-        <div className="oil-card">
+        <div className="oil-card" style={{ overflowX: 'auto' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <ChartIcon size={18} color="var(--teal-accent)" />
@@ -157,7 +157,7 @@ export const AnalyticsView: React.FC = () => {
           </div>
 
           {/* Simulated SVG S-Curve */}
-          <div style={{ height: '220px', display: 'flex', alignItems: 'flex-end', gap: '16px', padding: '10px 0', borderBottom: '1px solid var(--border-subtle)' }}>
+          <div className="preserve-grid" style={{ height: '230px', display: 'flex', alignItems: 'flex-end', gap: '16px', padding: '10px 0', borderBottom: '1px solid var(--border-subtle)' }}>
             {sCurveData.map((pt, idx) => (
               <div key={idx} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%', justifyContent: 'flex-end', gap: '4px' }}>
                 <div style={{ display: 'flex', alignItems: 'flex-end', gap: '4px', width: '100%', height: '180px', justifyContent: 'center' }}>
@@ -219,7 +219,7 @@ export const AnalyticsView: React.FC = () => {
       </div>
 
       {/* Row 2.5: Schedule Adherence Scatter Plot */}
-      <div className="oil-card">
+      <div className="oil-card" style={{ overflowX: 'auto' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <Activity size={18} color="var(--teal-accent)" />
@@ -241,7 +241,7 @@ export const AnalyticsView: React.FC = () => {
           </div>
         </div>
         
-        <div style={{ height: '200px', position: 'relative', borderLeft: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)', margin: '10px 20px 20px 20px' }}>
+        <div className="preserve-grid" style={{ height: '220px', position: 'relative', borderLeft: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)', margin: '10px 20px 20px 20px', minWidth: '600px' }}>
           {/* Zero Line */}
           <div style={{ position: 'absolute', top: '50%', left: 0, right: 0, height: '1px', background: 'var(--border-subtle)', borderTop: '1px dashed var(--text-muted)' }} />
           
